@@ -36,7 +36,7 @@ weatherApp.controller('forecastControler',['$scope', '$resource', '$routeParams'
 	$scope.city=cityService.city;
 	$scope.days=$routeParams.days || '2';
 
-	$scope.weatherApi=$resource("http://api.openweathermap.org/data/2.5/forecast/daily",{callback: "JSON_CALLBACK"}, {get:{method:"JSONP"}});
+	$scope.weatherApi=$resource("//api.openweathermap.org/data/2.5/forecast/daily",{callback: "JSON_CALLBACK"}, {get:{method:"JSONP"}});
 	$scope.weatherResult=$scope.weatherApi.get({q:$scope.city, cnt:$scope.days, APPID:'aec5946887b0b1060c15bd80d606c62d'});
 
 	$scope.convertToCel=function(degK){
@@ -45,7 +45,7 @@ weatherApp.controller('forecastControler',['$scope', '$resource', '$routeParams'
 		}
 	$scope.icon=function(ic){
 
-		return "http://openweathermap.org/img/w/"+ic+".png";
+		return "//openweathermap.org/img/w/"+ic+".png";
 
 		}
 	$scope.convertToDate=function(dt){
