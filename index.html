@@ -1,41 +1,55 @@
 <!DOCTYPE html>
-<html lang="en-us" ng-app="weatherApp">
-<head>
-	<title>Learn AngularJS</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        <meta charset="UTF-8">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5
-/angular.min.js"></script>
-<script src="//code.angularjs.org/1.4.5/angular-route.js"></script>      
-<script src="//code.angularjs.org/1.4.5/angular-resource.min.js"></script>   
-<script src="app.js"></script>
-<style>
-            html, body, input, select, textarea
-            {
-                font-size: 1.05em !important;
-            }
-        </style>
-</head>
-<body>
-<header>
-			<nav class="navbar navbar-default">
-			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/">AngularJS Weather</a>
-				</div>
+<html lang="en" ng-app="computer">
 
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#/"><i class="fa fa-home"></i> Home</a></li>
-				</ul>
-			</div>
-			</nav>
-		</header>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Computer Solutions</title>
+    <!-- Bootstrap core CSS -->
+    <script data-require="angular.js@1.5.8" data-semver="1.4.5" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5
+/angular-route.js"></script>
+    <script src="script.js"></script>
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet" />
+  </head>
 
-        <div class="container">
+  <body>
+    <div class="container">
+      <!-- The justified navigation menu is meant for single line per list item.
+           Multiple lines will require custom code not provided by Bootstrap. -->
+      <div class="masthead">
+        <h3 class="text-muted">Computer Solutions</h3>
+        <nav>
+          <ul class="nav nav-justified">
+            <li>
+              <a href="#/main">Home</a>
+            </li>
+            <li>
+              <a href="#/about">About</a>
+            </li>
+            <li>
+              <a href="#/services">Services</a>
+            </li>
+            <li>
+              <a href="#/contact">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+        <div ng-view=""></div>
+      
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>© 2016 Company, Inc.</p>
+      </footer>
+    </div>
+    <!-- /container -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  </body>
 
-<div ng-view></div>
-		</div>
-
-</body>
 </html>
