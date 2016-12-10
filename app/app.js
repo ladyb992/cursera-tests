@@ -10,5 +10,5 @@ angular.module('ngApp', [
 config(['$routeProvider', function($routeProvider) {
  
 
-  $routeProvider.otherwise({redirectTo: '/facebook'});
+  $routeProvider.otherwise({redirectTo: '/view1'});
 }]);
