@@ -47,7 +47,7 @@ $scope.welcomeMsg = "Welcome " + response.name;
 $scope.isLoggedIn = true;
 $scope.userInfo = response;
 $facebook.api("/me?fields=picture").then(function(response){
-$scope.picture = response.picture;
+$scope.picture = response.picture.data.url;
 });
 
 },
