@@ -62,5 +62,12 @@ function(err){
   $scope.welcomeMsg = "Please Log in";
 });
 }
+$scope.postStatus = function(){
+  var body = this.body;
+  $facebook.api('/me?fields=feed', 'post', {message:body}).then(function(response){
+    $scope.msg = 'Thanks for Posting';
+    refresh();
+  });
+}
 refresh();
 }]);
