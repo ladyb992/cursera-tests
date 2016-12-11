@@ -3,7 +3,7 @@
     <h4 style="padding-top: 20px ">Please log in</h4>
     <h4>{{welcomeMsg}}</h4>
     <div ng-if="isLoggedIn==true">
-<a href="{{userInfo.link}}" target="_blank"><img ng-src="{{picture}}"></a>
+<a href="{{userInfo.link}}" target="_blank"><img ng-src="{{picture}}" style="width: 200px"></a>
 </div>
     <div ng-if="isLoggedIn==false">
 <button type="button" ng-click="login()" class="btn btn-default" >Login</button>
