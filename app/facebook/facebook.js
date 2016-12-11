@@ -42,7 +42,7 @@ $scope.logout = function(){
   });
 }
 function refresh(){
-$facebook.api("/me?fields=id,name,email,first_name,last_name,gender,link").then(function(response){
+$facebook.api("/me?fields=id,name,email,first_name,last_name,gender,link, picture").then(function(response){
 $scope.welcomeMsg = "Welcome " + response.name;
 $scope.isLoggedIn = true;
 $scope.userInfo = response;
