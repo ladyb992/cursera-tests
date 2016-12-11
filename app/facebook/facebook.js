@@ -52,4 +52,5 @@ function(err){
   $scope.welcomeMsg = "Please Log in";
 });
 }
+refresh();
 }]);
