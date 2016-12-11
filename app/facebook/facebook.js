@@ -52,7 +52,7 @@ $facebook.api("/me?fields=permissions").then(function(response){
     $scope.permissions=response.permissions.data;
     $facebook.api("/me?fields=posts").then(function(response){
       $scope.p=response.posts;
-      $scope.post=response.posts.data;
+      $scope.posts=response.posts.data;
     });
 });
 });
