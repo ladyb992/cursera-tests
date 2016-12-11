@@ -42,10 +42,10 @@ $scope.logout = function(){
   });
 }
 function refresh(){
-$facebook.api("/me").then(function(GraphObjectList){
+$facebook.api("/me?fields=id,email,first_name,last_name").then(function(response){
 $scope.welcomeMsg = "Welcome " + response.name;
 $scope.isLoggedIn = true;
-$scope.userInfo = GraphObjectList;
+$scope.userInfo = response;
 
 },
 function(err){
