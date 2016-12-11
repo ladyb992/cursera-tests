@@ -64,9 +64,9 @@ function(err){
 }
 $scope.postStatus = function(){
   var body = this.body;
-  $facebook.api('/me/feed', 'post', {message: 'Hello, world!'}).then(function(response){
+  $facebook.api('/me/feed', 'post', {message: body}).then(function(response){
     $scope.msg = 'Thanks for Posting';
-    
+
     refresh();
   });
 }
