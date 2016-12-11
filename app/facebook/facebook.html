@@ -10,16 +10,16 @@
 </div>
 <br>
 <br>
-<div class="well">
+<div class="well" ng-if="isLoggedIn==true">
 
   <h4>User Info</h4>
   <ul>
-    <li>Id: someID</li>
-    <li>First name: John</li>
-    <li>Last name: Doe</li>
-    <li>Email address: john@gmail.com</li>
-    <li>Gender: Male</li>
-    <li>Locale: enGB</li>
+    <li>Id: {{userInfo.id}}</li>
+    <li>First name: {{userInfo.first_name}}</li>
+    <li>Last name: {{userInfo.last_name}}</li>
+    <li>Email address: {{userInfo.email}}</li>
+    <li>Gender: {{userInfo.gender}}</li>
+    <li>Locale: {{userInfo.locale}}</li>
   </ul>
 </div>
 <br>
