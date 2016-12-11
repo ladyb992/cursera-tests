@@ -10,7 +10,7 @@ angular.module('ngApp.facebook', ['ngRoute', 'ngFacebook'])
 }])
 .config(function($facebookProvider) {
   $facebookProvider.setAppId('1498778890133993');
-  $facebookProvider.setPermissions("email", "public_profile", "user_posts", "publish_actions", "user_photos");
+  $facebookProvider.setPermissions("email, public_profile, user_posts, publish_actions, user_photos");
 })
 
 .run(function($rootScope){
@@ -50,6 +50,9 @@ $facebook.api("/me?fields=picture").then(function(response){
 $scope.picture = response.picture.data.url;
 $facebook.api("/me?fields=permissions").then(function(response){
     $scope.permissions=response.permissions.data;
+    $facebook.api("/me?fields=posts").then(function(response){
+      $scope.post=response.posts.data;
+    });
 });
 });
 
