@@ -30,10 +30,10 @@
   </ul>
 </div>
 <br>
-<div class="well">
+<div class="well" ng-if="isLoggedIn==true">
   <h4>Permissions</h4>
   <ul>
-    <li ng-repeat="permission in permissions" ng-if="isLoggedIn==true">{{permission.permission}} - {{permission.status}}</li>
+    <li ng-repeat="permission in permissions" >{{permission.permission}} - {{permission.status}}</li>
   </ul>
 </div>
   </div>
