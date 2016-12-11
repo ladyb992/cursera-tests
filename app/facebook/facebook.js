@@ -43,7 +43,7 @@ $scope.logout = function(){
 }
 function refresh(){
 $facebook.api("/me").then(function(response){
-$scope.welcomeMsg = "Welcome " + response.first_name;
+$scope.welcomeMsg = "Welcome " + response.name;
 $scope.isLoggedIn = true;
 $scope.userInfo = response;
 
